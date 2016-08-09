@@ -1,14 +1,15 @@
-* {
+*, :before, :after {
 	padding: 0;
 	margin: 0;
     box-sizing: border-box;
 }
 body {
     background-color: #2f2f2f;
+    background-image: url("../images/bg.jpg");
+    background-position: center bottom;
 	color: #fff;
 	font-family: Arial;
     font-size: 20px;
-    letter-spacing: 1px;
 }
 
 #header {
@@ -30,11 +31,6 @@ body {
     height: 100vh;
 }
 
-.button a {
-    text-decoration: none;
-    color: #fff;
-    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000;
-}
 .button {
     display: table;
     margin: 0 auto;
@@ -49,4 +45,25 @@ body {
 }
 .button:hover {
     background: linear-gradient(45deg, #252525 10px, rgb(249, 158, 26) 0%);
+}
+.button a {
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000;
+    letter-spacing: 1px;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0px;
+    padding: 5px;
+}
+#footer p {
+    color: #ABABAB;
+    font-size: 8px;
+    font-style: italic;
+}
+
+#menu:not(:target), #gen:not(:target), #create:not(:target) {
+    display: none;
 }

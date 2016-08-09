@@ -1,18 +1,23 @@
 #content {
     position: absolute;
-    top: 40%;
+    top: 200px;
     left: 50%;
     transform: translate(-50%, -50%);
 
-    min-width: 500px;
-    max-width: 800px;
+    min-width: 300px;
+    max-width: 550px;
 
     text-align: center;
 }
 
-.shown {
-	display: block;
+#gen .stratName {
+	font-size: 45px;
+	font-family: Roboto;
+	letter-spacing: 2px;
+	text-shadow: 1px 1px 0px #C4C4C4, 2px 2px 0px #A1A1A1, 3px 3px 0px #808080, 4px 4px 0px #696969;
 }
-.hidden {
-	display: none;
+#gen .stratText {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-family: Helvetica;
 }

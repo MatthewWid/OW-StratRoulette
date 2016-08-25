@@ -25,6 +25,10 @@ body {
 #headerMenu {
     text-align: center;
 }
+#headerMenu img {
+    user-select: none;
+    -webkit-user-select: none;
+}
 
 #wrapper {
     padding-top: 70px;
@@ -34,6 +38,7 @@ body {
 .button {
     display: table;
     margin: 0 auto;
+    position: relative;
 
     padding: 5px;
     margin-bottom: 5px;
@@ -51,6 +56,10 @@ body {
     color: #fff;
     text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000;
     letter-spacing: 1px;
+
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 #footer {
@@ -60,7 +69,7 @@ body {
 }
 #footer p {
     color: #ABABAB;
-    font-size: 8px;
+    font-size: 10px;
     font-style: italic;
 }
 

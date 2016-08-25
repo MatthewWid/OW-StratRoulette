@@ -1,6 +1,11 @@
+@font-face {
+	font-family: "Roboto";
+	src: url("../fonts/Roboto-Bold.ttf");
+}
+
 #content {
     position: absolute;
-    top: 200px;
+    top: 250px;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -10,14 +15,58 @@
     text-align: center;
 }
 
-#gen .stratName {
+.fadeIn {
+    animation: fadeIn .2s linear forwards;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+#stratName {
 	font-size: 45px;
 	font-family: Roboto;
 	letter-spacing: 2px;
 	text-shadow: 1px 1px 0px #C4C4C4, 2px 2px 0px #A1A1A1, 3px 3px 0px #808080, 4px 4px 0px #696969;
 }
-#gen .stratText {
+#stratText {
 	margin-top: 10px;
 	margin-bottom: 10px;
 	font-family: Helvetica;
+	font-size: 20px;
+}
+#stratCredit {
+	font-style: italic;
+	font-size: 16px;
+	color: #a6a6a6;
+	margin-bottom: 15px;
+}
+#stratCopy {
+	opacity: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+#gen .button.gen:after {
+    content: "Or you can use the spacebar";
+    position: absolute;
+    left: calc(100% + 0px);
+    top: 50%;
+	left: calc(100% + 10px);
+    transform: translateY(-50%);
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: #252525;
+    color: #eee;
+    padding: 5px;
+    min-width: 100%;
+    font-size: 12px;
+
+    display: none;
+}
+#gen .button.gen:hover:after {
+	display: block;
 }

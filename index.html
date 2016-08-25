@@ -13,9 +13,8 @@
 		<link rel="stylesheet" type="text/css" href="css/global.css" />
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
 
+		<script src="js/strats.js" type="text/javascript" defer></script>
 		<script src="js/index.js" type="text/javascript" defer></script>
-
-		<link href='https://fonts.googleapis.com/css?family=Roboto:700' rel='stylesheet' type='text/css'>
 
 	</head>
 
@@ -23,13 +22,14 @@
 
 		<div id="header">
 			<div id="headerMenu">
-				<a href="index.html">
+				<a href="#menu">
 					<img width="168" height="56" src="images/logo.png" alt="Return to Homepage" />
 				</a>
 			</div>
 		</div>
 
 		<div id="content">
+
 			<div id="menu">
 				<div class="button">
 					<a href="#gen">Generate a New Strat</a>
@@ -38,21 +38,30 @@
 					<a href="#create">Create a New Strat</a>
 				</div>
 			</div>
+
 			<div id="gen">
-				<h1 class="stratName">Gotta Go Fast</h1>
-				<p class="stratText">Play with 6 Lucios and do a full lap of the map with speed boosts one after the other.</p>
-				<p class="stratCredit">Strat by MatthewMob</p>
-				<div class="button">
-					<a>Generate a New Strat</a>
+				<div id="genContent">
+					<h1 id="stratName">Strat Header</h1>
+					<p id="stratText">Strat Text</p>
+					<p id="stratCredit">Strat by <span id="stratAuthor">Author</span></p>
 				</div>
+				<div class="button copy">
+					<a href="javascript:void(0);">Copy to Clipboard</a>
+				</div>
+				<div class="button gen">
+					<a href="javascript:void(0);">Generate a New Strat</a>
+				</div>
+				<textarea id="stratCopy"></textarea>
 			</div>
+
 			<div id="create">
 				Create.
 			</div>
+			
 		</div>
 
 		<div id="footer">
-			<p>I do not own anything created by &copy;2016 BLIZZARD ENTERTAINMENT, INC, including the Overwatch logo, brand, or trademark</p>
+			<p>I do not own anything, or am representitive of, or affiliated with &copy;2016 BLIZZARD ENTERTAINMENT, INC., including the Overwatch logo, brand, or trademark</p>
 		</div>
 
 	</body>

@@ -6,6 +6,7 @@
 body {
     background-color: #2f2f2f;
     background-image: url("../images/bg.jpg");
+    background-size: 100vw 100vh;
     background-position: center bottom;
 	color: #fff;
 	font-family: Arial;

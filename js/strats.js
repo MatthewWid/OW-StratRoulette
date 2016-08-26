@@ -27,7 +27,7 @@ strats.push({
 });
 strats.push({
 	header: "I'll Cover You",
-	text: "Pharahs my only attack targets on the ground and soldiers may only attack targets in the air or on high ground.",
+	text: "Pharahs may only attack targets on the ground and soldiers may only attack targets in the air or on high ground.",
 	author: "DudeMIC"
 });
 strats.push({

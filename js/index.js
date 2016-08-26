@@ -2,6 +2,8 @@ if (document.location.hash == "" || document.location.has == "#") {
 	document.location.hash = "#menu";
 }
 
+var httpRequest, data;
+
 function copyStrat() {
 	document.getElementById("stratCopy").select();
 	try {
@@ -12,22 +14,22 @@ function copyStrat() {
 	}
 }
 
-var last = -1;
 function genStrat() {
-	var getRand = Math.floor(Math.random() * strats.length) + 0;
-	var strat = strats[getRand];
-	if (getRand != last) {
-		document.getElementById("stratName").innerHTML = strat.header;
-		document.getElementById("stratText").innerHTML = strat.text;
-		document.getElementById("stratAuthor").innerHTML = strat.author;
-		document.getElementById("stratCopy").value = strat.text;
-	} else {
-		genStrat();
+	httpRequest = new XMLHttpRequest();
+	httpRequest.onreadystatechange = function() {
+		if (httpRequest.readyState === XMLHttpRequest.DONE) {
+			if (httpRequest.status === 200) {
+				console.log("Received data successfully");
+				data = JSON.parse(httpRequest.responseText);
+				document.getElementById("stratName").innerHTML = data[0].header;
+				document.getElementById("stratText").innerHTML = data[0].text;
+				document.getElementById("stratCredit").innerHTML = data[0].author;
+			}
+		}
 	}
+	httpRequest.open("GET", "../backend/getStrat.php");
+	httpRequest.send(null);
 
-	document.querySelector("#gen .button.copy a").innerHTML = "Copy to Clipboard";
-	last = getRand;
-	
 	document.querySelector("#genContent").classList.remove("fadeIn");
 	setTimeout(function() {
 		document.querySelector("#genContent").classList.add("fadeIn");

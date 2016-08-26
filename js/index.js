@@ -27,6 +27,11 @@ function genStrat() {
 
 	document.querySelector("#gen .button.copy a").innerHTML = "Copy to Clipboard";
 	last = getRand;
+	
+	document.querySelector("#genContent").classList.remove("fadeIn");
+	setTimeout(function() {
+		document.querySelector("#genContent").classList.add("fadeIn");
+	}, 1);
 }
 
 document.querySelector("#gen .button.copy a").addEventListener("click", copyStrat);
@@ -38,10 +43,6 @@ document.addEventListener("keypress", function(event) {
 	var e = event.keyCode;
 	if (e == 32) {
 		genStrat();
-		document.querySelector("#genContent").classList.remove("fadeIn");
-		setTimeout(function() {
-			document.querySelector("#genContent").classList.add("fadeIn");
-		}, 1);
 		console.log("Pressed");
 	}
 });

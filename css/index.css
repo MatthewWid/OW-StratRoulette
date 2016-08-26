@@ -70,3 +70,18 @@
 #gen .button.gen:hover:after {
 	display: block;
 }
+
+#create .createField {
+    display: block;
+    font-size: 18px;
+    width: 500px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: none;
+    border-bottom: 4px solid #B8B8B8;
+    transition: border-bottom .2s ease;
+}
+#create .createField:focus {
+    outline: none;
+    border-bottom: 4px solid rgb(249, 158, 26);
+}

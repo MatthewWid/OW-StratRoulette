@@ -3,15 +3,11 @@
 	$con = mysqli_connect("localhost", "root", "cisco");
 	$db = mysqli_select_db($con, "ow-stratroulette");
 
-	$sql = mysqli_query($con, "SELECT * FROM strats ORDER BY id ASC");
+	$sql = mysqli_query($con, "SELECT * FROM strats ORDER BY rand() LIMIT 1");
 
-	$id = "id";
-	$header = "header";
-	$text = "text";
-	$author = "author";
+	$res = array();
+	while($row = mysqli_fetch_assoc($sql)) $res[] = $row;
 
-	$rows = mysqli_fetch_assoc($sql);
-
-	echo "ID: " . $rows[$id] . "<br />" . "Header: " . $rows[$header] . "<br />" . "Text: " . $rows[$text] . "<br />" . "Author: " . $rows[$author];
+	echo json_encode($res);
 
 ?>

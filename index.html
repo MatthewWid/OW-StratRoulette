@@ -41,7 +41,7 @@
 
 			<div id="gen">
 				<div id="genContent">
-					<h1 id="stratName">[Strat Header]</h1>
+					<h1 id="stratHeader">[Strat Header]</h1>
 					<p id="stratText">[Strat Text]</p>
 					<p id="stratCredit">Strat by <span id="stratAuthor">[Author]</span></p>
 				</div>
@@ -58,15 +58,16 @@
 			</div>
 
 			<div id="create">
-				<input type="text" id="createHeader" class="createField" placeholder="Title" maxlength="30" />
-				<input type="text" id="createText" class="createField" placeholder="Instructions" maxlength="250" />
-				<input type="text" id="createAuthor" class="createField" placeholder="Author" maxlength="12" />
-				<div class="button">
+				<input type="text" id="createHeader" class="createField" placeholder="Title" maxlength="255" />
+				<input type="text" id="createText" class="createField" placeholder="Instructions" maxlength="255" />
+				<input type="text" id="createAuthor" class="createField" placeholder="Author" maxlength="255" />
+				<div class="button" id="sendStrat">
 					<a href="javascript:void(0);">Submit New Strat</a>
 				</div>
 				<div class="button">
 					<a href="#gen">Generate a New Strat</a>
 				</div>
+				<div id="response"></div>
 			</div>
 			
 		</div>

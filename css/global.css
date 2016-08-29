@@ -52,11 +52,12 @@ body {
 .button:hover {
     background: linear-gradient(45deg, #252525 10px, rgb(249, 158, 26) 0%);
 }
-.button a {
+.button a, .button {
     text-decoration: none;
     color: #fff;
     text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000;
     letter-spacing: 1px;
+    font-size: 20px;
 
     cursor: pointer;
     user-select: none;

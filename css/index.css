@@ -26,7 +26,7 @@
         opacity: 1;
     }
 }
-#stratName {
+#stratHeader {
 	font-size: 45px;
 	font-family: Roboto;
 	letter-spacing: 2px;
@@ -84,4 +84,8 @@
 #create .createField:focus {
     outline: none;
     border-bottom: 4px solid rgb(249, 158, 26);
+}
+#response {
+    font-size: 14px;
+    color: #ccc;
 }

@@ -1,7 +1,7 @@
 <?php
 	
-	$con = mysqli_connect("localhost", "root", "cisco");
-	$db = mysqli_select_db($con, "ow-stratroulette");
+	include "./config.php";
+	$con = mysqli_connect($server_ip, $server_user, $server_password, $server_db);
 
 	$sql = mysqli_query($con, "SELECT * FROM strats ORDER BY rand() LIMIT 1");
 

@@ -7,8 +7,8 @@
 		$text = htmlentities($_GET["text"]);
 		$author = htmlentities($_GET["author"]);
 
-		$con = mysqli_connect("localhost", "root", "cisco");
-		$db = mysqli_select_db($con, "ow-stratroulette");
+		include "./config.php";
+		$con = mysqli_connect($server_ip, $server_user, $server_password, $server_db);
 
 		$sql = mysqli_query($con, "INSERT INTO strats (header, text, author) VALUES ('" . $title . "', '" . $text . "', '" . $author . "')");
 

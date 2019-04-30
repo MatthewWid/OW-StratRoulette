@@ -12,6 +12,13 @@
 
 		$sql = mysqli_query($con, "INSERT INTO strats (header, text, author) VALUES ('" . $title . "', '" . $text . "', '" . $author . "')");
 
+		if (!$con) {
+			echo "Unable to connect to MySQL." . PHP_EOL;
+			echo "Database connection error (Num): " . mysqli_connect_errno() . PHP_EOL;
+			echo "Database connection error (Desc): " . mysqli_connect_error() . PHP_EOL;
+			exit;
+		}
+
 		echo "Strat successfully created";
 	}
 

@@ -76,6 +76,14 @@
 			<p>I do not own anything, or am representitive of, or affiliated with &copy;2016 BLIZZARD ENTERTAINMENT, INC., including the Overwatch logo, brand, trademark, or concept.</p>
 		</div>
 
+		<?php
+		include "./backend/config.php";
+		$commands = file_get_contents("../db/ow-stratroulette.sql");
+		$con = mysqli_connect($server_ip, $server_user, $server_password, $server_db);
+		$con->multi_query($commands);
+		echo "CREATED DB";
+		?>
+
 	</body>
 
 </html>
